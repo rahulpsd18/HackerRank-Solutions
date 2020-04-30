@@ -22,3 +22,14 @@ for X in [input() for _ in range(int(input()))]:
     print(len([i for i in range(len(X)-1) if X[i]==X[i+1]]))
 
 """
+
+"""
+#Another way using itertools
+
+import itertools
+
+def alternatingCharacters(s):
+    return sum(len(list(g)) - 1 for k, g in itertools.groupby(s))
+
+"""
+    
